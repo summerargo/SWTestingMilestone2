@@ -6,8 +6,13 @@ public class WriteToDatabase {
     public WriteToDatabase(File file) {
     }
 
-    //Method that adds to database
-    public Connection AddToDB() {
+    //Method that adds a project to the database
+    public Connection AddProjectToDB(String name, int number, string requirements) {
+        return null;
+    }
+    
+    //Method that adds a course to the database
+    public Connection AddCourseToDB(String name, int number, string prerequisite) {
         return null;
     }
 
