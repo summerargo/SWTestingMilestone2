@@ -17,7 +17,7 @@ public class WriteToDatabase {
     }
 
     //Method that removes from database
-    public Connection RemoveFromDB() {
+    public Connection RemoveFromDB(int id) {
         return null;
     }
 }
