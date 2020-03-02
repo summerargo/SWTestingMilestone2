@@ -26,8 +26,23 @@ public class WriteToDatabase {
         return null;
     }
 
-    //Method that removes from database
-    public Connection RemoveFromDB(int ID) {
+    //Method that removes a project from database
+    public Connection RemoveProjectFromDB(int projectID) {
+        return null;
+    }
+    
+    //Method that removes a course from database
+    public Connection RemoveCourseFromDB(int courseID) {
+        return null;
+    }
+
+    //Method that removes a student from database
+    public Connection RemoveStudentFromDB(int studentID) {
+        return null;
+    }
+    
+    //Method that removes an employee from database
+    public Connection RemoveEmployeeFromDB(int employeeID) {
         return null;
     }
 }
