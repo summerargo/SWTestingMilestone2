@@ -24,6 +24,8 @@ public void readDatabase(){
 
 
 ReadFromDatabase readDB = new ReadFromDatabase(“/testPathway”);
+Connection validRead = new Connection();
+assert.equals(validRead,readDB.ReadFile);
 
 }
  
@@ -31,13 +33,18 @@ ReadFromDatabase readDB = new ReadFromDatabase(“/testPathway”);
 public void searchDatabase(){
 
 SearchDatabase searchDB= new SearchDatabase(“/testPathway”);
+Connection validSearch = new Connection();
+assert.equals(validSearch,searchDb.SearchThroughFile)
+
 
 }
 
 @Test
 public void WriteToDatabase(){
 
-WriteToDatabase searchDB= new WriteToDatabase(“/testPathway”);
+WriteToDatabase writeDB= new WriteToDatabase(“/testPathway”);
+Connection validWrite = new Connection();
+assert.equals(validWrite,writeDB.AddToDB);
 
 }
 
