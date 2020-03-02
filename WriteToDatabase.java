@@ -3,26 +3,26 @@ import java.sql.Connection;
 
 public class WriteToDatabase {
     //Constructor
-    public WriteToDatabase(File file) {
+    public WriteToDatabase(File DataBase) {
     }
 
     //Method that adds a project to the database
-    public Connection AddProjectToDB(String project_name, int project_ID, String requirements) {
+    public Connection AddProjectToDB(String projectName, int projectID, String requiredSkills[]) {
         return null;
     }
 
     //Method that adds a course to the database
-    public Connection AddCourseToDB(String course_name, int course_ID, String prerequisite) {
+    public Connection AddCourseToDB(String courseName, int courseID, String prerequisites[]) {
         return null;
     }
 
     //Method that adds a student to the database
-    public Connection AddStudentToDB(String student_name, int student_ID, String skills[], String classification) {
+    public Connection AddStudentToDB(String studentName, int studentID, String skills[], String classification, double GPA) {
         return null;
     }
 
     //Method that adds a faculty to the database
-    public Connection AddFacultyToDB(String faculty_name, int faculty_ID, String position, Double salary) {
+    public Connection AddEmployeeToDB(String employeeName, int employeeID, String position, Double salary) {
         return null;
     }
 
