@@ -3,7 +3,7 @@ import java.sql.Connection;
 
 public class ReadFromDatabase {
     //Constructor
-    public ReadFromDatabase(File file) {
+    public ReadFromDatabase(File DataBase) {
     }
 
     //Method reads from database file
