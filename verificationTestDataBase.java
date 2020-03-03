@@ -10,67 +10,71 @@ import java.sql.Connection;
 
 public class verificationDataBase
 {
-        @Test
-        public void DatabaseConnection() {
+    @Test
+    public void DatabaseConnection() {
         DatabaseConnection testDB= new DatabaseConnection(new File("~/DatabaseConnection.java"));
         DatabaseConnection validConnect = new DatabaseConnection(new File("~/Database.java"));
         assertEquals(validConnect,testDB.connect());
-        }
+    }
 
-//Tests the ReadFile Method
-        @Test
-        public void readDatabase(){
+    //Tests the ReadFile Method
+    @Test
+    public void readDatabase(){
         ReadFromDatabase readDB = new ReadFromDatabase(new File("~/ReadFromDatabase.java"));
         DatabaseConnection validRead = new DatabaseConnection(new File("~/Database.java"));
         assertEquals(validRead,readDB.ReadFile());
-        }
+    }
 
-        //throws an exception for searching for courses no existant
-@Test(expected = NullPointerException.class)
-public void noSearchedClasses()
-        {
+    //throws an exception for searching for courses no existant
+    @Test(expected = NullPointerException.class)
+    public void noSearchedClasses()
+    {
         DatabaseConnection validWrite = new DatabaseConnection(new File("~/Database.java"));
         SearchDatabase searchDB= new SearchDatabase(new File("~/SearchDatabase.java"));
-        }
+    }
 
-        //throws an exception for adding a class with the same name or i as something existing
-        @Test(expected = NullPointerException.class)
-        public void noMatchingClasses()
-        {
+    //throws an exception for adding a class with the same name or i as something existing
+    @Test(expected = NullPointerException.class)
+    public void noMatchingClasses()
+    {
         WriteToDatabase writeDB= new WriteToDatabase(new File("~/WriteToDatabase.java"));
         DatabaseConnection validWrite = new DatabaseConnection(new File("~/Database.java"));
         String[] validSkills = {"Java"};
         writeDB.AddProjectToDB("Data Analysis", 5555, validSkills);
         writeDB.AddProjectToDB("Data Analysis", 5556, validSkills);
         writeDB.AddProjectToDB("Intro to Java", 5555, validSkills);
-        }
+    }
 
-@Test(expected = NullPointerException.class)
-public void noRemovableProject()
-        {
+    @Test(expected = NullPointerException.class)
+    public void noRemovableProject()
+    {
         DatabaseConnection validWrite = new DatabaseConnection(new File("~/Database.java"));
+        WriteToDatabase writeDB= new WriteToDatabase(new File("~/WriteToDatabase.java"));
         writeDB.RemoveProjectFromDB(1234);
-        }
+    }
 
-@Test(expected = NullPointerException.class)
-public void noRemovableCourse()
-        {
+    @Test(expected = NullPointerException.class)
+    public void noRemovableCourse()
+    {
         DatabaseConnection validWrite = new DatabaseConnection(new File("~/Database.java"));
+        WriteToDatabase writeDB= new WriteToDatabase(new File("~/WriteToDatabase.java"));
         writeDB.RemoveCourseFromDB(1234);
-        }
+    }
 
-@Test(expected = NullPointerException.class)
-public void noRemovableStudent()
-        {
+    @Test(expected = NullPointerException.class)
+    public void noRemovableStudent()
+    {
         DatabaseConnection validWrite = new DatabaseConnection(new File("~/Database.java"));
+        WriteToDatabase writeDB= new WriteToDatabase(new File("~/WriteToDatabase.java"));
         writeDB.RemoveStudentFromDB(1234);
-        }
+    }
 
-@Test(expected = NullPointerException.class)
-public void noRemovableEmployee()
-        {
+    @Test(expected = NullPointerException.class)
+    public void noRemovableEmployee()
+    {
         DatabaseConnection validWrite = new DatabaseConnection(new File("~/Database.java"));
+        WriteToDatabase writeDB= new WriteToDatabase(new File("~/WriteToDatabase.java"));
         writeDB.RemoveEmployeeFromDB(1234);
-        }
+    }
 
 }
