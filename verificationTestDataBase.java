@@ -8,7 +8,7 @@ import java.io.File;
 import java.sql.Connection;
 
 
-public class verifyDataBase
+public class verificationDataBase
 {
         @Test
         public void DatabaseConnection() {
