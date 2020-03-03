@@ -34,7 +34,7 @@ public class testDatabase {
     //Tests the AddProjectToDB Method
     @Test
     public void WriteToDatabase() {
-        WriteToDatabase writeDB= new WriteToDatabase(new File("~/WriteToDatabase.java");
+        WriteToDatabase writeDB= new WriteToDatabase(new File("~/WriteToDatabase.java"));
         DatabaseConnection validWrite = new DatabaseConnection(new File("~/Database.java"));
         String[] validSkills = {"Java"};
         assertEquals(validWrite,writeDB.AddProjectToDB("Data Analysis", 5555, validSkills));
