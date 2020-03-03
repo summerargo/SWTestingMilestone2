@@ -7,17 +7,17 @@ public class WriteToDatabase {
     }
 
     //Method that adds a project to the database
-    public Connection AddProjectToDB(String projectName, int projectID, String requiredSkills[]) {
+    public Connection AddProjectToDB(String projectName, int projectID, String[] requiredSkills) {
         return null;
     }
 
     //Method that adds a course to the database
-    public Connection AddCourseToDB(String courseName, int courseID, String prerequisites[]) {
+    public Connection AddCourseToDB(String courseName, int courseID, String[] prerequisites) {
         return null;
     }
 
     //Method that adds a student to the database
-    public Connection AddStudentToDB(String studentName, int studentID, String skills[], String classification, double GPA) {
+    public Connection AddStudentToDB(String studentName, int studentID, String[] skills, String classification, double GPA) {
         return null;
     }
 
@@ -30,7 +30,7 @@ public class WriteToDatabase {
     public Connection RemoveProjectFromDB(int projectID) {
         return null;
     }
-    
+
     //Method that removes a course from database
     public Connection RemoveCourseFromDB(int courseID) {
         return null;
@@ -40,7 +40,7 @@ public class WriteToDatabase {
     public Connection RemoveStudentFromDB(int studentID) {
         return null;
     }
-    
+
     //Method that removes an employee from database
     public Connection RemoveEmployeeFromDB(int employeeID) {
         return null;
