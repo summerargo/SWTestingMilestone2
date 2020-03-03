@@ -34,7 +34,7 @@ public void searchDatabase(){
 
 SearchDatabase searchDB= new SearchDatabase(“SearchDatabase.java”);
 Connection validSearch = new Connection();
-assert.equals(validSearch,searchDb.SearchThroughFile)
+assert.equals(validSearch,searchDb.SearchThroughFile);
 
 
 }
