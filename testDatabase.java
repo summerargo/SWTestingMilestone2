@@ -48,7 +48,7 @@ public void WriteToDatabase(){
 
 WriteToDatabase writeDB= new WriteToDatabase(new File("~/WriteToDatabase.java));
 Connection validWrite = new Connection();
-assertEquals(validWrite,writeDB.AddToDB());
+assertEquals(validWrite,writeDB.AddProjectToDB());
 
 }
 
