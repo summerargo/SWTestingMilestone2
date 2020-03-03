@@ -1,61 +1,42 @@
+import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.After;
+import org.junit.Test;
 import java.io.File;
 import java.sql.Connection;
-package org.junit.jupiter.api;
-
-import static org.junit.Assert.assertEquals;
-
-import org.junit.jupiter.api.Test;
 
 
+public class testDatabase {
+    //Tests the connection to our database
+    @Test
+    public void DatabaseConnection() {
+        DatabaseConnection testDB= new DatabaseConnection(new File("~/DatabaseConnection.java"));
+        DatabaseConnection validConnect = new DatabaseConnection(new File("~/Database.java"));
+        assertEquals(validConnect,testDB.connect());
+    }
 
-public class testDatabase{
+    //Tests the ReadFile Method
+    @Test
+    public void readDatabase(){
+        ReadFromDatabase readDB = new ReadFromDatabase(new File("~/ReadFromDatabase.java"));
+        DatabaseConnection validRead = new DatabaseConnection(new File("~/Database.java"));
+        assertEquals(validRead,readDB.ReadFile());
+    }
 
+    //Tests the SearchThroughFile Method
+    @Test
+    public void searchDatabase() {
+        SearchDatabase searchDB= new SearchDatabase(new File("~/SearchDatabase.java"));
+        DatabaseConnection validSearch = new DatabaseConnection(new File("~/Database.java"));
+        assertEquals(validSearch,searchDB.SearchThroughFile("Java"));
+    }
 
-@Test
-public void DatabaseConnection(){
-
-DatabaseConnection testDB= new DatabaseConnection(new File("~/DatabaseConnection.java"));
-Connection validConnect = new Connection();
-
-assertEquals(validConnect,testDB.connect());
-
+    //Tests the AddProjectToDB Method
+    @Test
+    public void WriteToDatabase() {
+        WriteToDatabase writeDB= new WriteToDatabase(new File("~/WriteToDatabase.java");
+        DatabaseConnection validWrite = new DatabaseConnection(new File("~/Database.java"));
+        String[] validSkills = {"Java"};
+        assertEquals(validWrite,writeDB.AddProjectToDB("Data Analysis", 5555, validSkills));
+    }
 }
-
-
-@Test
-
-public void readDatabase(){
-
-
-ReadFromDatabase readDB = new ReadFromDatabase(new File("~/ReadFromDatabase.java));
-Connection validRead = new Connection();
-assertEquals(validRead,readDB.ReadFile());
-
-}
- 
-@Test
-public void searchDatabase(){
-
-SearchDatabase searchDB= new SearchDatabase(new File("~/SearchDatabase.java));
-Connection validSearch = new Connection();
-assertEquals(validSearch,searchDb.SearchThroughFile());
-
-
-}
-
-@Test
-public void WriteToDatabase(){
-
-WriteToDatabase writeDB= new WriteToDatabase(new File("~/WriteToDatabase.java));
-Connection validWrite = new Connection();
-assertEquals(validWrite,writeDB.AddProjectToDB());
-
-}
-
-
-
-
-
-}
-
-
