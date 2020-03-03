@@ -19,9 +19,10 @@ public class testDatabase {
 
     //Tests the ReadFile Method
     @Test
-    public void testReadDatabase(){
+    public void testReadDatabase() {
         ReadFromDatabase readDB = new ReadFromDatabase(new File("~/ReadFromDatabase.java"));
         DatabaseConnection validRead = new DatabaseConnection(new File("~/Database.java"));
+        validRead.connect();
         assertEquals(validRead, readDB.ReadFile());
     }
 
@@ -30,6 +31,7 @@ public class testDatabase {
     public void testSearchDatabase() {
         SearchDatabase searchDB= new SearchDatabase(new File("~/SearchDatabase.java"));
         DatabaseConnection validSearch = new DatabaseConnection(new File("~/Database.java"));
+        validSearch.connect();
         assertEquals(validSearch, searchDB.SearchThroughFile("Java"));
     }
 
@@ -38,6 +40,7 @@ public class testDatabase {
     public void testAddProject() {
         WriteToDatabase writeDB= new WriteToDatabase(new File("~/WriteToDatabase.java"));
         DatabaseConnection validWrite = new DatabaseConnection(new File("~/Database.java"));
+        validWrite.connect();
         String[] validSkills = {"Java"};
         assertEquals(validWrite, writeDB.AddProjectToDB("Data Analysis", 5555, validSkills));
     }
@@ -47,6 +50,7 @@ public class testDatabase {
     public void testRemoveProject() {
         WriteToDatabase writeDB= new WriteToDatabase(new File("~/WriteToDatabase.java"));
         DatabaseConnection validWrite = new DatabaseConnection(new File("~/Database.java"));
+        validWrite.connect();
         assertEquals(validWrite, writeDB.RemoveProjectFromDB(5555));
     }
 }
